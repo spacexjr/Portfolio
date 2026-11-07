@@ -27,15 +27,7 @@ h1 span{color:#4d9a7a}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border:2px solid var(--deep);border-radius:8px;background:var(--mint);box-shadow:3px 3px 0 var(--deep);font-weight:900;font-size:13px;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--deep)}.btn.dark{background:var(--deep);color:var(--cream)}
 .bmo-stage{position:relative;display:grid;place-items:center;min-height:250px;z-index:1}
-.bmo-art{width:250px;max-width:100%;height:auto;overflow:visible;filter:drop-shadow(7px 9px 0 #244f43);animation:bmo-float 4s ease-in-out infinite}
-.bmo-art .body{fill:#65cda2;stroke:#173e37;stroke-width:5;stroke-linejoin:round}
-.bmo-art .screen{fill:#b9f0d4;stroke:#173e37;stroke-width:4}
-.bmo-art .screen-inner{fill:none;stroke:#8bd8b6;stroke-width:2}
-.bmo-art .face{fill:#173e37}
-.bmo-art .mouth{fill:none;stroke:#173e37;stroke-width:3.5;stroke-linecap:round}
-.bmo-art .button-outline{stroke:#173e37;stroke-width:3}
-.bmo-art .limb{fill:#55b98e;stroke:#173e37;stroke-width:4;stroke-linejoin:round}
-.bmo-art .detail{fill:#d9f8e7;opacity:.55}
+.bmo-art{display:block;width:250px;max-width:100%;height:auto;object-fit:contain;filter:drop-shadow(7px 9px 0 #244f43);animation:bmo-float 4s ease-in-out infinite}
 @keyframes bmo-float{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-8px) rotate(-1deg)}}
 .orbit{position:absolute;width:270px;height:88px;border:2px dashed #5b9b7c;border-radius:50%;transform:rotate(-20deg);opacity:.65}
 .bubble{position:absolute;top:3px;right:2px;background:var(--yellow);border:2px solid var(--deep);padding:8px 11px;border-radius:9px;font:14px var(--terminal);box-shadow:3px 3px 0 var(--deep);transform:rotate(5deg)}
@@ -84,29 +76,9 @@ h1 span{color:#4d9a7a}
 <p class="lead">Desenvolvedor independente, curioso por sistemas, Android e Linux. Gosto de desmontar ideias, entender como funcionam e construir minhas próprias soluções.</p>
 <div class="hero-actions"><a class="btn dark" href="#projects">▶ Ver projetos</a><a class="btn" href="https://github.com/spacexjr" target="_blank" rel="noreferrer">GitHub ↗</a></div>
 </div>
-<div class="bmo-stage" aria-label="Ilustração vetorial do BMO">
+<div class="bmo-stage" aria-label="BMO de Hora de Aventura">
 <div class="orbit"></div><div class="bubble">Olá, humano!</div>
-<svg class="bmo-art" viewBox="0 0 280 300" role="img" aria-labelledby="bmo-title">
-<title id="bmo-title">BMO, o pequeno console verde de Adventure Time</title>
-<path class="limb" d="M54 171 Q29 163 22 184 Q18 197 33 202 L63 194Z"/>
-<path class="limb" d="M224 171 Q251 163 258 184 Q262 197 247 202 L217 194Z"/>
-<path class="limb" d="M91 260 L88 280 Q87 289 101 289 L119 289 Q128 288 125 279 L122 259Z"/>
-<path class="limb" d="M158 259 L155 279 Q152 289 166 289 L184 289 Q196 288 192 278 L188 258Z"/>
-<rect class="body" x="57" y="19" width="166" height="245" rx="19"/>
-<path class="detail" d="M75 31 Q82 25 94 25 H207 Q216 25 216 37 V47 H75Z"/>
-<rect class="screen" x="75" y="43" width="130" height="119" rx="9"/>
-<rect class="screen-inner" x="81" y="49" width="118" height="107" rx="5"/>
-<ellipse class="face" cx="116" cy="91" rx="5.5" ry="8"/>
-<ellipse class="face" cx="164" cy="91" rx="5.5" ry="8"/>
-<path class="mouth" d="M126 113 Q140 126 154 113"/>
-<text x="140" y="184" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#173e37" letter-spacing="2">BMO</text>
-<path class="button-outline" fill="#f18b78" d="M177 197 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0"/>
-<path class="button-outline" fill="#8ed8e7" d="M151 219 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0"/>
-<path class="button-outline" fill="#f7d879" d="M183 224 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0"/>
-<path d="M92 193 H130 M111 174 V212" stroke="#173e37" stroke-width="8" stroke-linecap="round"/>
-<path d="M92 193 H130 M111 174 V212" stroke="#b9f0d4" stroke-width="3" stroke-linecap="round"/>
-<rect x="127" y="239" width="28" height="5" rx="2.5" fill="#347d62"/>
-</svg>
+<img class="bmo-art" src="https://image.pngaaa.com/859/376859-middle.png" alt="BMO, personagem de Hora de Aventura, acenando" width="250" height="232" loading="eager">
 </div>
 </section>
 <div class="statusline"><span>● SYSTEM READY — LET'S PLAY</span><span>PLAYER 1: SPACE</span></div>
