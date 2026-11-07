@@ -1,83 +1,62 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0b0b">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#091311">
 <meta name="description" content="Space — desenvolvedor interessado em Android, Linux e sistemas de baixo nível.">
 <title>Space — spacexjr</title>
 <style>
-:root{color-scheme:dark;--bg:#0b0b0b;--fg:#dedede;--muted:#929292;--dim:#666;--line:#202020;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--sans:Arial,Helvetica,sans-serif}
+:root{color-scheme:dark;--bg:#090e0d;--fg:#dce7e1;--muted:#8d9e95;--dim:#65766d;--line:#1c2b25;--bmo:#62c9a4;--bmo-dark:#183d32;--bmo-light:#a8e4c5;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--sans:Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}a:hover{color:#fff}
-.page{width:min(896px,100%);min-height:100vh;margin:0 auto;border-left:1px solid #1b1b1b;border-right:1px solid #1b1b1b}
-.sitebar{height:31px;padding:0 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;color:#888;font:13px var(--mono)}
-.intro{padding:92px 72px 94px;border-bottom:1px solid var(--line)}
+a{color:inherit;text-decoration:none}a:hover{color:var(--bmo-light)}
+.page{width:min(896px,100%);min-height:100vh;margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.sitebar{height:31px;padding:0 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;color:#8b9b92;font:13px var(--mono)}
+.sitebar .signal{color:var(--bmo);font-size:10px}
+.intro{padding:86px 72px 88px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:30px}
 h1{font-size:23px;font-weight:400;letter-spacing:-.5px;margin:0 0 22px}
 .intro p{margin:0;color:var(--muted);max-width:560px;line-height:1.75}
-.intro p strong{color:#d5d5d5;font-weight:400}
-.intro .more{margin-top:23px}
-.under{text-decoration:underline;text-decoration-color:#777;text-underline-offset:4px}
+.intro p strong{color:#d5e2da;font-weight:400}.intro .more{margin-top:23px}
+.under{text-decoration:underline;text-decoration-color:#638d7b;text-underline-offset:4px}
+.bmo-mark{width:76px;min-width:76px;height:94px;position:relative;border:1px solid #72d5ad;border-radius:13px 13px 10px 10px;background:linear-gradient(145deg,#83dbb4,#4ca987);box-shadow:0 0 32px #62c9a414;display:flex;align-items:center;justify-content:center}
+.bmo-mark:before{content:"";position:absolute;top:23px;left:17px;width:7px;height:9px;border-radius:50%;background:#183c32;box-shadow:34px 0 #183c32}
+.bmo-mark:after{content:"";position:absolute;top:43px;left:27px;width:21px;height:9px;border-bottom:2px solid #183c32;border-radius:50%}
+.bmo-mark .slot{position:absolute;bottom:10px;width:24px;height:3px;border-radius:3px;background:#347d62}
+.bmo-mark .feet{position:absolute;bottom:-7px;left:13px;width:12px;height:8px;border-radius:0 0 5px 5px;background:#3b8c6c;box-shadow:38px 0 #3b8c6c}
 .section{padding:55px 72px 58px;border-bottom:1px solid var(--line);position:relative}
-.section:before{content:"";position:absolute;left:72px;top:56px;width:32px;height:1px;background:#292929}
-.section:after{content:"";position:absolute;right:56px;top:40px;width:15px;height:15px;border-top:1px solid #202020;border-right:1px solid #202020}
-.label{font:14px var(--mono);color:#929292;margin:14px 0 22px}
-.project{display:grid;grid-template-columns:35px minmax(145px,1fr) minmax(220px,1.5fr);align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #1c1c1c;font-size:14px}
-.project:last-child{border-bottom:0}
-.year{font:12px var(--mono);color:#858585}
-.name{font:14px var(--mono);color:#d5d5d5}
-.arrow{color:#777;margin-left:5px}
-.desc{color:#8d8d8d;text-align:right;font-size:13px}
-.work{padding-top:55px;padding-bottom:58px}
-.job{padding:12px 4px;border-bottom:1px solid #1c1c1c}
-.job:last-child{border-bottom:0}
-.jobtop{display:flex;justify-content:space-between;align-items:center;gap:15px}
-.jobname{font:14px var(--mono);color:#d5d5d5}
-.date{font:11px var(--mono);color:#858585}
-.job p{margin:0;color:#888;font-size:13px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-.about p{margin:0;color:#929292;font-size:13px}
-.links{display:flex;flex-wrap:wrap;gap:17px;margin-top:22px;font:12px var(--mono);color:#aaa}
-.footer{padding:22px 72px 27px;display:flex;justify-content:space-between;color:#666;font:11px var(--mono)}
-@media(max-width:650px){.intro{padding:65px 25px 70px}.section{padding:48px 25px}.section:before{left:25px;top:48px}.section:after{right:22px;top:32px}.project{grid-template-columns:36px 1fr;gap:5px}.desc{grid-column:2;text-align:left;padding-bottom:5px}.about{grid-template-columns:1fr;gap:17px}.footer{padding:20px 25px;gap:10px;flex-direction:column}.jobtop{align-items:flex-start}.date{white-space:nowrap}}
+.section:before{content:"";position:absolute;left:72px;top:56px;width:32px;height:1px;background:#294238}
+.section:after{content:"";position:absolute;right:56px;top:40px;width:15px;height:15px;border-top:1px solid #20352c;border-right:1px solid #20352c}
+.label{font:14px var(--mono);color:#91a69a;margin:14px 0 22px}
+.project{display:grid;grid-template-columns:35px minmax(145px,1fr) minmax(220px,1.5fr);align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #1b2923;font-size:14px}
+.project:last-child{border-bottom:0}.year{font:12px var(--mono);color:#77887e}.name{font:14px var(--mono);color:#d1ded5}.arrow{color:var(--bmo);margin-left:5px}.desc{color:#89998f;text-align:right;font-size:13px}
+.project:hover .name{color:var(--bmo-light)}
+.work{padding-top:55px;padding-bottom:58px}.job{padding:12px 4px;border-bottom:1px solid #1b2923}.job:last-child{border-bottom:0}.jobtop{display:flex;justify-content:space-between;align-items:center;gap:15px}.jobname{font:14px var(--mono);color:#d1ded5}.date{font:11px var(--mono);color:#77887e}.job p{margin:0;color:#89998f;font-size:13px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px}.about p{margin:0;color:#929f97;font-size:13px}.links{display:flex;flex-wrap:wrap;gap:17px;margin-top:22px;font:12px var(--mono);color:#a3b5aa}.links a:hover{color:var(--bmo)}
+.footer{padding:22px 72px 27px;display:flex;justify-content:space-between;color:#63776c;font:11px var(--mono)}
+@media(max-width:650px){.intro{padding:65px 25px 70px}.bmo-mark{width:60px;min-width:60px;height:76px;transform:scale(.9)}.section{padding:48px 25px}.section:before{left:25px;top:48px}.section:after{right:22px;top:32px}.project{grid-template-columns:36px 1fr;gap:5px}.desc{grid-column:2;text-align:left;padding-bottom:5px}.about{grid-template-columns:1fr;gap:17px}.footer{padding:20px 25px;gap:10px;flex-direction:column}.jobtop{align-items:flex-start}.date{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
-</head>
-<body>
-<div class="page">
-<header class="sitebar"><a href="#top">spacexjr.dev</a></header>
+</style></head>
+<body><div class="page">
+<header class="sitebar"><a href="#top">spacexjr.dev</a><span class="signal">● BMO SYSTEM ONLINE</span></header>
 <main id="top">
-<section class="intro">
-<h1>Space</h1>
+<section class="intro"><div><h1>Space</h1>
 <p><strong>Desenvolvedor independente.</strong> Construo software, exploro sistemas e gosto de entender os detalhes que fazem a tecnologia funcionar.</p>
-<p class="more">Aqui você pode conhecer um pouco <a class="under" href="#about">sobre mim</a>.</p>
+<p class="more">Aqui você pode conhecer um pouco <a class="under" href="#about">sobre mim</a>.</p></div>
+<div class="bmo-mark" role="img" aria-label="Ícone minimalista inspirado no BMO"><span class="slot"></span><span class="feet"></span></div>
 </section>
-
-<section class="section" id="projects">
-<div class="label">Coisas que construí</div>
+<section class="section" id="projects"><div class="label">Coisas que construí</div>
 <div class="project"><span class="year">2026</span><a class="name" href="https://github.com/spacexjr/saturnBMO" target="_blank" rel="noreferrer">saturnBMO <span class="arrow">↗</span></a><span class="desc">Um assistente pessoal com interface Android, voz e IA local.</span></div>
 <div class="project"><span class="year">2026</span><a class="name" href="https://github.com/spacexjr/JupiterBoot" target="_blank" rel="noreferrer">JupiterBoot <span class="arrow">↗</span></a><span class="desc">Um menu de inicialização independente para dispositivos Android.</span></div>
 <div class="project"><span class="year">2025</span><a class="name" href="https://github.com/spacexjr/SideralBOT" target="_blank" rel="noreferrer">SideralBOT <span class="arrow">↗</span></a><span class="desc">Integração de chat entre Discord e servidores Minecraft Bedrock.</span></div>
 </section>
-
-<section class="section work" id="work">
-<div class="label">No que tenho trabalhado</div>
+<section class="section work" id="work"><div class="label">No que tenho trabalhado</div>
 <div class="job"><div class="jobtop"><span class="jobname">Android & Linux</span><span class="date">Em andamento</span></div><p>Boot, kernels, ramdisks, ferramentas e experimentos em hardware real.</p></div>
 <div class="job"><div class="jobtop"><span class="jobname">Local AI & voice</span><span class="date">Em andamento</span></div><p>Assistentes locais, reconhecimento de voz e interfaces conversacionais.</p></div>
 <div class="job"><div class="jobtop"><span class="jobname">Open source</span><span class="date">Sempre</span></div><p>Projetos públicos, documentação e aprendizado compartilhado.</p></div>
 </section>
-
-<section class="section" id="about">
-<div class="label">Um pouco sobre mim</div>
-<div class="about">
-<p>Tenho interesse em desenvolvimento Android, Linux e programação de baixo nível. Gosto de investigar como as coisas funcionam, testar ideias e transformar experimentos em ferramentas úteis.</p>
-<p>Meu trabalho é guiado por curiosidade, prática e documentação. Ainda estou aprendendo — e boa parte da graça está justamente nisso.</p>
-</div>
+<section class="section" id="about"><div class="label">Um pouco sobre mim</div>
+<div class="about"><p>Tenho interesse em desenvolvimento Android, Linux e programação de baixo nível. Gosto de investigar como as coisas funcionam, testar ideias e transformar experimentos em ferramentas úteis.</p>
+<p>Meu trabalho é guiado por curiosidade, prática e documentação. Ainda estou aprendendo — e boa parte da graça está justamente nisso.</p></div>
 <div class="links"><a href="https://github.com/spacexjr" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://github.com/spacexjr?tab=repositories" target="_blank" rel="noreferrer">Repositórios ↗</a></div>
-</section>
-</main>
+</section></main>
 <footer class="footer"><span>© <span id="year"></span> Space</span><span>feito com calma e curiosidade.</span></footer>
-</div>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+</div><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
